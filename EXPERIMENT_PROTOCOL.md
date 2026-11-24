@@ -29,3 +29,7 @@ The CPD contribution is rejected if matched-turnover cost controls explain the g
 ## Current status
 
 This protocol is defined. No new performance result is asserted until a CQ execution produces verified outputs.
+
+## Compute note
+
+The lab CQ registry currently accepts GitHub source repositories owned by `SuuTTT`. The canonical research repository is `SansaZheng/Financial-Momentum-`; until the registry policy is updated or an authorized mirror is supplied, CQ submission is intentionally blocked rather than bypassed. The GitHub source commit remains the canonical provenance record.
