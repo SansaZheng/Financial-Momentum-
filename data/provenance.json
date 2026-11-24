@@ -1,0 +1,27 @@
+{
+  "paper": {
+    "title": "Slow Momentum with Fast Reversion",
+    "arxiv": "https://arxiv.org/abs/2105.13727",
+    "journal_doi": "10.3905/jfds.2021.1.081"
+  },
+  "author_repositories": {
+    "cpd": {
+      "url": "https://github.com/kieranjwood/slow-momentum-fast-reversion",
+      "commit": "b22006066c274cd5953446baf24b99a2726068e4"
+    },
+    "dmn": {
+      "url": "https://github.com/kieranjwood/trading-momentum-transformer",
+      "commit": "e0352cb0bdbf8045accb1bf1a5705ae0cb9ea624"
+    }
+  },
+  "public_futures_pilot": {
+    "url": "https://github.com/ArturSepp/TrendFollowingSystems",
+    "commit": null,
+    "status": "separate constructed-data pilot; not Pinnacle CLC"
+  },
+  "licensed_pinnacle_data": {
+    "available": false,
+    "path": null,
+    "status": "required for faithful paper reproduction"
+  }
+}
