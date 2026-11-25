@@ -14,3 +14,5 @@ jobs:
           python-version: '3.11'
       - name: Verify vendored source provenance
         run: python scripts/run_source_smoke.py
+      - name: Run causal and cost contract tests
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
