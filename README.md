@@ -23,3 +23,7 @@ python3 scripts/verify_sources.py
 ```
 
 The next stage is a bounded CQ smoke job, followed by a matched baseline and preregistered ablations. Large data and model outputs belong in the authorized `/date` or `/data` workspace; only provenance, summaries, and reproducible code should be committed here.
+
+## Continuous verification
+
+Every push and pull request runs `scripts/run_source_smoke.py` through GitHub Actions. This verifies the vendored upstream commit markers and confirms that the repository still distinguishes licensed Pinnacle data from the public constructed-data pilot.
