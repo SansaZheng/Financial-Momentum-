@@ -29,9 +29,11 @@ The next stage is a bounded CQ smoke job, followed by a matched baseline and pre
 GitHub stores code, configuration, protocols, lightweight summaries, and `storage/asset-manifest.json`. Dataset shards, selected recovery checkpoints, and model artifacts belong in private Hugging Face Dataset/Model repositories. The manifest pins each asset to an HF revision and SHA-256; experiments must use that revision instead of a moving `main`.
 
 ```bash
-# Install and authenticate without putting a token in a file or command history.
-python -m pip install huggingface_hub
-hf auth login
+# Install the project's HF client dependency and use its interactive login.
+python -m pip install -r requirements-hf.txt
+umask 077
+hf auth login --no-add-to-git-credential
+hf auth whoami
 
 # Check identity (the token is never printed).
 python scripts/hf_assets.py status
@@ -39,7 +41,7 @@ python scripts/hf_assets.py status
 # Download only a required file into a remote-server cache/work directory.
 PROJECT_CACHE=/date/zyy/hf-cache python scripts/hf_assets.py download \
   --repo-id ORG_OR_USER/private-dataset --repo-type dataset \
-  --filename shards/train-00000.parquet --revision REVISION_SHA \
+  --filename shards/train-00000.parquet --revision REVISION_SHA --sha256 FILE_SHA256 \
   --local-dir /date/zyy/slow-momentum-fast-reversion/data
 
 # Upload one approved shard or checkpoint; --create creates a private repo.
