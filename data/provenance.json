@@ -16,8 +16,9 @@
   },
   "public_futures_pilot": {
     "url": "https://github.com/ArturSepp/TrendFollowingSystems",
-    "commit": null,
-    "status": "separate constructed-data pilot; not Pinnacle CLC"
+    "commit": "6d886c6aa755ab28354ff99d95e2ed6f3ba872b6",
+    "ref": "main",
+    "status": "separate constructed-data pilot; not Pinnacle CLC; fetched for acquisition smoke test only"
   },
   "licensed_pinnacle_data": {
     "available": false,
