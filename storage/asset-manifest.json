@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "project": "financial-momentum",
+  "github": {
+    "repository": "SansaZheng/Financial-Momentum-",
+    "commit": "8071e29aaa21701faff4a6aaaca4fd8d627bb995"
+  },
+  "assets": {
+    "datasets": [],
+    "models": []
+  },
+  "policy": {
+    "default_private": true,
+    "no_credentials_in_repo": true,
+    "no_full_workdir_upload": true,
+    "no_unapproved_intermediate_checkpoints": true
+  }
+}
