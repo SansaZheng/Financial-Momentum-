@@ -1,0 +1,16 @@
+{
+  "status": "mechanism_only",
+  "warning": "Synthetic panels are not financial evidence and do not reproduce the paper.",
+  "seed": 7,
+  "length": 756,
+  "assets": 4,
+  "cost_bps": 10,
+  "bootstrap": {"block": 20, "draws": 300, "seed": 20261125},
+  "threshold": "0.75 quantile of pre-change-point score",
+  "results": {
+    "trend_flip": {"base_sharpe": -0.9029, "gate_sharpe": -2.1732, "delta_ci_95": [-2.4012, -0.1288]},
+    "variance_only": {"base_sharpe": -0.7058, "gate_sharpe": -1.2711, "delta_ci_95": [-1.14, -0.0288]},
+    "no_change": {"base_sharpe": -0.8553, "gate_sharpe": -2.5049, "delta_ci_95": [-2.701, -0.6939]}
+  },
+  "interpretation": "This naive score gate is rejected by the preregistered falsification criteria; it is retained as a negative control, not as a claimed improvement."
+}
