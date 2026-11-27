@@ -17,7 +17,10 @@ URL = "https://github.com/ArturSepp/TrendFollowingSystems.git"
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--dest", type=Path, required=True)
-    ap.add_argument("--ref", default="master")
+    # The upstream repository moved its default branch from ``master`` to
+    # ``main``.  Keep the ref explicit in provenance while making the helper
+    # work out of the box for a fresh remote workspace.
+    ap.add_argument("--ref", default="main")
     args = ap.parse_args()
     args.dest.parent.mkdir(parents=True, exist_ok=True)
     if (args.dest / ".git").exists():
